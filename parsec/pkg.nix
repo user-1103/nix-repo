@@ -1,7 +1,7 @@
 { inputs, pkgDeps }:
 
 let
-  version = "150-78";
+  version = "150-86";
 
   src = pkgDeps.stdenv.mkDerivation {
     name = "parsec-pkg";
