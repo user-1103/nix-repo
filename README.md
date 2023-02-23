@@ -15,11 +15,9 @@ Use the following in your inputs and your set.
 
 ```
 inputs = {
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager.url = "github:user-1103/nix-repo ";
   };
 ```
-
-**TODO** Fix link
 
 ## Support
 
