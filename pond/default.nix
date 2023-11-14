@@ -20,4 +20,17 @@ pkgs.stdenv.mkDerivation {
         mkdir -p $out/bin
         cp bin/pond $out/bin/pond
     '';
+    meta = with pkgs.lib; {
+        description = "A soothing in-terminal idle screen";
+        longDescription = ''
+            A software that simulates a little pond,
+            complete with flowering lilypads and adorable
+            little frogs jumping around.
+        '';
+        homepage = "https://gitlab.com/alice-lefebvre/pond";
+        license = licenses.gpl3Only;
+        maintainers = with maintainers; [ "USER1103" ];
+        mainProgram = "pond";
+        platforms = platforms.linux;
+    };
 }
