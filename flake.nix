@@ -7,6 +7,7 @@
 
     packages.x86_64-linux = rec {
       parsec = (import ./parsec) {inherit inputs;};
+      pond = (import ./pond) {inherit inputs;};
     };
 
   };
