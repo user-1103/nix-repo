@@ -8,6 +8,10 @@ use. There are a few reasons why something might be here:
 3. I need a custom config that isn't available via an override.
 4. I wrote the software.
 
+## Included Packages
+
+- [pond](https://gitlab.com/alice-lefebvre/pond) 
+
 ## Use
 
 This package set is available as a [nix flake](https://nixos.wiki/wiki/Flakes).
