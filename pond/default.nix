@@ -5,20 +5,19 @@ in
 pkgs.stdenv.mkDerivation {
     pname = "pond";
     version = "1.0";
-    src = fetchGit {
+    src = pkgs.fetchgit {
         url = "https://gitlab.com/alice-lefebvre/pond";
-        ref = "845c290d58cd9edbc964570bcd6aaf3ba320fbf3";
+        rev = "845c290d58cd9edbc964570bcd6aaf3ba320fbf3";
+        hash = "sha256-xG2dQ0hzQMNGV2NreLzXQWeDE5QJc0j6A5JBXmSMavk=";
+
     };
     buildInputs = [pkgs.ncurses];
     buildPhase = ''
-        preBuild
         mkdir -p bin
-        gcc -std=gnu99 -Wall -Os pond.c -lcurses -o bin/pond
-        postBuild
+        gcc -std=gnu99 -Wall -Os pond.c -lncurses -o bin/pond
     '';
     installPhase = ''
-        preInstall
-        cp bin/pond $out/usr/games/pond
-        postInstall
+        mkdir -p $out/bin
+        cp bin/pond $out/bin/pond
     '';
 }
